@@ -1,0 +1,153 @@
+#validateLogin{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mod-mini-login{
+    &-inner{
+
+    }
+    &-header{
+        font-family: $fontDefault;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        color: $black;
+            @at-root .ems-logoff {.ems-login-title{display: none;}}
+            @at-root .ems-login {.ems-logoff-title{display: none;}}
+            > span{
+                display: inline-block;
+                vertical-align: top;
+                font-size: 16px;
+                font-family: $fontDefault;
+                font-weight: 600;
+                letter-spacing: 0.3px;
+                line-height: 15px;
+                padding: 0 12px;
+                cursor:pointer;
+                > span{
+                    position: relative;
+                    padding: 5px 3px 23px 3px;
+                    display: block;
+                    &:after{
+                        content:'';
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 0;
+                        opacity: 0;
+                        background: $pink;
+                        bottom: 0;
+                        left: 0;
+                        @include transition(all 0.12s ease-in-out);
+                    }
+                }
+                &:hover{
+                    span{
+                        &:after{
+                            height: 6px;
+                            opacity: 1;
+                        }
+                    }
+                }
+                @media screen and (max-width: 1010px){
+                    padding:0 9px;
+                }
+            }
+    }
+    &-body{
+        display: none;
+    }
+    &-footer{
+        display: none;
+    }
+}
+.mod-mini-cart{
+    display: inline-block;
+    vertical-align: top;
+    &-inner{
+
+    }
+    &-header{
+        font-family: $fontDefault;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        color: $black;
+        > .ems-cart-info{
+            display: inline-block;
+            vertical-align: top;
+            font-size: 16px;
+            font-family: $fontDefault;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            line-height: 15px;
+            padding: 0 0 0 12px;
+            cursor:pointer;
+            position: relative;
+            > span[id$="lbfKUTU_SEPET"]{
+                position: relative;
+                padding: 2px 3px 20px 3px;
+                display: block;
+                &:after{
+                    content:'';
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 0;
+                    opacity: 0;
+                    background: $pink;
+                    bottom: 0;
+                    left: 0;
+                    @include transition(all 0.12s ease-in-out);
+                }
+                span{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .icon-bag{
+                    font-size: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    margin-right: 15px;
+                }
+                .text{
+                    height: 20px;
+                    line-height: 20px;
+                }
+            }
+            > #lblUrunAdet{
+                position: absolute;
+                top: -3px;
+                left: 26px;
+                background: $pink;
+                color: $white;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                font-size: 12px;
+                font-family: $fontDefault;
+                letter-spacing: 0.2px;
+                text-align: center;
+                line-height: 18px;
+            }
+            &:hover{
+                span{
+                    &:after{
+                        height: 6px;
+                        opacity: 1;
+                    }
+                }
+            }
+            @media screen and (max-width: 1010px){
+                padding-left: 9px;
+            }
+        }
+    }
+    &-body{
+        display: none;
+    }
+    &-footer{
+        display: none;
+    }
+}

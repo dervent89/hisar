@@ -1,0 +1,29 @@
+a.btn{
+    display: inline-block;
+    vertical-align: top;
+    padding: 13px 23px;
+    min-width: 200px;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    font-family: $fontDefault;
+
+    &-wr-icon{
+        span[class^="icon"]{
+            float:right;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+    }
+
+    &-white{
+        background: $white;
+        color: $black;
+        text-align: center;
+    }
+
+    &-text{
+        min-width: 0;
+    }
+}

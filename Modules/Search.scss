@@ -1,0 +1,141 @@
+@media screen and (min-width: $deviceMobile){
+    .kutuArama{
+        margin-top: 25px;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        max-width: 438px;
+        height: 45px;
+        border-radius: 5px;
+        border: solid 1px #d5d5d5;
+        background: $white;
+        position: relative;
+        .kutuHeaderArama{
+            display: none;
+        }
+        .kutuBodyArama{
+            .kutuArama_aramaText{
+                input{
+                    margin-top: 0;
+                    height: 43px;
+                    border: none;
+                    padding: 10px 50px 10px 10px;
+                    font-family: $fontDefault;
+                    font-size: 15px;
+                    letter-spacing: 0.3px;
+                    color: $lightGrey;
+                }
+            }
+            .kutuArama_lnkHizliUrun{
+                display: none;
+            }
+            .kutuArama_btnArama{
+                .btnArama{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 48px;
+                    height: 48px;
+                    display: block;
+                    text-align: center;
+                    line-height: 48px;
+                    i{
+                        font-size: 18px;
+                        color:$lightGrey;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $deviceMobile){
+    .kutuArama{
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        height: 60px;
+        background: $white-two;
+        position: relative;
+        .kutuHeaderArama{
+            display: none;
+        }
+        .kutuBodyArama{
+            .kutuArama_aramaText{
+                input{
+                    margin-top: 0;
+                    height: 60px;
+                    border: none;
+                    padding: 10px 50px 10px 36px;
+                    font-family: $fontDefault;
+                    font-weight: 700;
+                    font-size: 15px;
+                    letter-spacing: 0.2px;
+                    color: $lightGrey;
+                    text-transform: uppercase;
+                }
+            }
+            .kutuArama_lnkHizliUrun{
+                display: none;
+            }
+            .kutuArama_btnArama{
+                table,
+                table tbody,
+                table tbody tr,
+                table tbody tr td,
+                table tbody tr th{
+                    display:block;
+                    width: 0;
+                    height: 0;
+                }
+                .btnArama{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 50px;
+                    height: 60px;
+                    text-align: center;
+                    line-height: 60px;
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}
+// PLH TRUE :)
+body > div[ondblclick^="javascript"] {
+    background-color:$lightGrey !important;
+    border-bottom: 1px solid $lightGrey;
+    h3{
+        background: $borderColor !important;
+        padding: 5px 10px;
+        margin: 0 !important;
+        font-family: $fontDefault;
+        font-size: 16px;
+        font-weight: 700;
+        color: $black;
+        &:after{
+            content: $icon-caret-down;
+            font-family: 'icomoon'!important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            float: right;
+        }
+    }
+    > div{
+        padding: 5px 10px;
+        border-bottom: 1px solid #fff;
+        &:last-child{
+            border-bottom: none;
+        }
+        &:hover{
+            background: #d5d5d5;
+            color: $black !important;
+        }
+    }
+}

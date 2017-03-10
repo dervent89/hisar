@@ -1,0 +1,230 @@
+.tooltip{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;    
+    &-title{
+        display: inline-block;
+        vertical-align: top;
+    }
+    &-body{
+        position: absolute;
+        background: rgba(20, 20, 20, 0.85);
+        display: none;
+        padding: 35px 40px;
+        color: $white;
+        min-width: 225px;
+        left: 50%;
+        bottom: 25px;
+        text-align: left;
+        font-size: 15px;
+        line-height: 20px;
+        @include setTransform(translateX(-50%));
+        &:after{
+            content:$icon-caret-down;
+            display: block;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            font-family: icomoon;
+            font-variant: normal normal;
+            position: absolute;
+            bottom: -16px;
+            margin-left: -11px;
+            font-size: 22px;
+            left: 50%;
+            color: rgba(20, 20, 20, 0.85);
+        }
+    }
+    &:hover{
+        .tooltip-body{
+            display: block;
+        }
+    }
+}
+
+.system-banner{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    &-wrapper{
+        width: calc(100% + 50px);
+        display:inline-block;
+        vertical-align: top;
+        margin-left: -25px;
+        > li{
+            float: left;
+            padding: 25px;
+
+            > .inner{
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                figure{
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    img{
+                        @include setTransform(scale(1));
+                        @include transition(all 0.2s ease-in-out);
+                    }
+                }
+                &:hover{
+                    figure{
+                        img{
+                            @include setTransform(scale(1.1));
+                        }
+                    }
+                }
+            }
+
+            @at-root .countThree{
+                 > li{
+                    width: 33.33%;
+                        figcaption{
+                            position: absolute;
+                            display: block;
+                            left: 15px;
+                            right: 15px;
+                            bottom: 15px;
+                            background: $white;
+                            padding: 25px 15px;
+                            text-align: center;
+                            overflow: hidden;
+                            
+                            .title{
+                                display: block;
+                                width: 100%;
+                                margin-bottom: 5px;
+                                font-size: 20px;
+                                font-weight: bold;
+                                letter-spacing: 0.3px;
+                                color: $black;
+                            }
+                            .text{
+                                display: block;
+                                width: 100%;
+                                margin-bottom: 5px;
+                                font-size: 15px;
+                                letter-spacing: 0.3px;
+                                color: $black;
+                            }
+                        }
+                }
+            }
+            @at-root .countTwo{
+                 > li{
+                    width: 50%;
+                    figcaption{
+                        position: absolute;
+                        display: block;
+                        bottom: 0;
+                        left: 0;
+                        padding: 30px;
+                        text-align: left;
+                        width: 100%;
+                        max-width: 360px;
+                        .title{
+                            display: block;
+                            width: 100%;
+                            margin-bottom: 5px;
+                            font-size: 30px;
+                            font-weight: 300;
+                            line-height: 35px;
+                            color: $white;
+                        }
+                        .text{
+                            display: block;
+                            width: 100%;
+                            margin-bottom: 5px;
+                            font-size: 15px;
+                            letter-spacing: 0.3px;
+                            color: $white;
+                        }
+                        .btn{
+                            margin-top: 60px;
+                            background: $white;
+                            min-width: 200px;
+                            text-align: center; 
+                        }
+                        @at-root .instashop{
+                            figcaption{
+                                text-align: center !important;
+                                left: 50% !important;
+                                top: 50%;
+                                bottom: initial;
+                                @include setTransform(translate(-50%,-50%))
+                                .btn{
+                                    margin-top:15px !important;
+                                    background: none !important;
+                                    color: $white !important;
+                                    border: none;
+                                    padding: 0;
+                                    min-width: 0 !important;
+                                    > span:first-child{
+                                        display: none;
+                                    }
+                                    > span{
+                                        float: none;
+                                        &:before{
+                                            content:'\e918';
+                                            font-size: 55px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.information-icons{
+    position: relative;
+    width: 100%;
+    margin: 40px 0 70px;
+    &-list{
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        > li{
+            float: left;
+            width: 25%;
+            text-align: center;
+            padding: 0 15px;
+            .inner{
+                width: 100%;
+                max-width: 195px;
+                text-align: left;
+                margin: 0 auto;
+                span{
+                    display: block;
+                    &[class^='icon-']{
+                        font-size: 35px;
+                        margin-bottom: 5px;
+                        em{
+                            font-style: normal;
+                            font-family: $fontDefault;
+                            font-weight: 300;
+                            font-size: 45px;
+                            line-height: 0;
+                            margin-left: 10px;
+                        }
+                    }
+                    &.text{
+                        font-size: 18px;
+                        letter-spacing: 0.3px;
+                        line-height: 18px;
+                        color: $black;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
