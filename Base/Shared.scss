@@ -174,11 +174,11 @@ aside.left-bar{
 	float: left;
 	position: relative;
 	width: 100%;
-	max-width: 220px;
+	max-width: 260px;
 	background: $colorWhite;
 }
 article.content-bar{
-	padding-left: 220px;
+	padding-left: 290px;
 	width: 100%;
 	border-bottom:1px solid $borderColor;
 		@media screen and (max-width: $deviceMobile){
