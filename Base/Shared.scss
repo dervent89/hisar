@@ -180,7 +180,6 @@ aside.left-bar{
 article.content-bar{
 	padding-left: 290px;
 	width: 100%;
-	border-bottom:1px solid $borderColor;
 		@media screen and (max-width: $deviceMobile){
 			padding-left: 0;
 		}
