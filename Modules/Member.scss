@@ -5,7 +5,7 @@
 
 .mod-mini-login{
     &-inner{
-
+        position: relative;
     }
     &-header{
         font-family: $fontDefault;
@@ -14,7 +14,7 @@
         letter-spacing: 0.3px;
         color: $black;
             @at-root .ems-logoff {.ems-login-title{display: none;}}
-            @at-root .ems-login {.ems-logoff-title{display: none;}}
+            @at-root .ems-login {.ems-logoff-btn{display: none;}}
             > span{
                 display: inline-block;
                 vertical-align: top;
@@ -25,6 +25,7 @@
                 line-height: 15px;
                 padding: 0 12px;
                 cursor:pointer;
+                > a,
                 > span{
                     position: relative;
                     padding: 5px 3px 23px 3px;
@@ -42,12 +43,10 @@
                         @include transition(all 0.12s ease-in-out);
                     }
                 }
-                &:hover{
-                    span{
-                        &:after{
-                            height: 6px;
-                            opacity: 1;
-                        }
+                > a:hover{
+                    &:after{
+                        height: 6px;
+                        opacity: 1;
                     }
                 }
                 @media screen and (max-width: 1010px){
@@ -57,97 +56,142 @@
     }
     &-body{
         display: none;
-    }
-    &-footer{
-        display: none;
-    }
-}
-.mod-mini-cart{
-    display: inline-block;
-    vertical-align: top;
-    &-inner{
-
-    }
-    &-header{
-        font-family: $fontDefault;
-        font-weight: 600;
-        font-size: 16px;
-        letter-spacing: 0.3px;
-        color: $black;
-        > .ems-cart-info{
+        position: absolute;
+        top: 43px;
+        left: 50%;
+        z-index: 55;
+        background: rgba(255,255,255,0.95);
+        padding: 25px 40px;
+        width: 280px;
+        @include setTransform(translateX(-50%));
+        .ems-user-info{
             display: inline-block;
             vertical-align: top;
-            font-size: 16px;
-            font-family: $fontDefault;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-            line-height: 15px;
-            padding: 0 0 0 12px;
-            cursor:pointer;
-            position: relative;
-            > span[id$="lbfKUTU_SEPET"]{
-                position: relative;
-                padding: 2px 3px 20px 3px;
-                display: block;
-                &:after{
-                    content:'';
-                    display: block;
-                    position: absolute;
-                    width: 100%;
-                    height: 0;
-                    opacity: 0;
-                    background: $pink;
-                    bottom: 0;
-                    left: 0;
-                    @include transition(all 0.12s ease-in-out);
-                }
-                span{
+            width: 100%;
+            border-bottom: 1px solid #e8e8e8;
+            padding: 0 0 20px 0;
+            font-size: 15px;
+            color:$black;
+            span{
+                float: left;
+                margin-right: 10px;
+            }
+            em{
+                font-style: normal;
+            }
+        }
+        .ems-user-pages{
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            padding: 10px 0;
+            > div{
+                display: inline-block;
+                vertical-align: middle;
+                width: 100%;
+                a{
+                    color: $black;
+                    font-family: $fontDefault;
+                    font-size: 15px;
+                    padding: 10px 0;
                     display: inline-block;
-                    vertical-align: middle;
-                }
-                .icon-bag{
-                    font-size: 20px;
-                    height: 20px;
-                    line-height: 20px;
-                    margin-right: 15px;
-                }
-                .text{
-                    height: 20px;
-                    line-height: 20px;
-                }
-            }
-            > #lblUrunAdet{
-                position: absolute;
-                top: -3px;
-                left: 26px;
-                background: $pink;
-                color: $white;
-                width: 18px;
-                height: 18px;
-                border-radius: 50%;
-                font-size: 12px;
-                font-family: $fontDefault;
-                letter-spacing: 0.2px;
-                text-align: center;
-                line-height: 18px;
-            }
-            &:hover{
-                span{
-                    &:after{
-                        height: 6px;
-                        opacity: 1;
+                    font-weight: 700;
+                    &:hover{
+                        color: $pink;
                     }
                 }
             }
-            @media screen and (max-width: 1010px){
-                padding-left: 9px;
-            }
         }
-    }
-    &-body{
-        display: none;
     }
     &-footer{
         display: none;
+    }
+    &.opened{
+        .mod-mini-login-header{
+            > span{
+                > span:after{
+                    height: 6px;
+                    opacity: 1;
+                }
+            }
+        }
+        .mod-mini-login-body{
+            display: block;
+        }
+    }
+}
+
+.ems-page-login{
+    position: relative;
+    width: 100%;
+    background: url('/UPLOAD/new_site/login-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 110%;
+    .ems-page-member-login{
+        display: table;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
+        min-height: calc(100vh - 143px);
+        > .ems-col{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            padding: 45px 0;
+            > div{
+                @extend .animated;
+                @extend .flipInY;
+                margin: 0 auto;
+                width: 100%;
+                background: $white;
+                border-radius: 5px;
+                padding: 30px 46px;
+                .ems-field.submit{
+                    text-align: center;
+                }
+                &.ems-login{
+                    max-width: 460px;
+                    text-align: left;
+                    .ems-login-header{
+                        font-family: $fontDefault;
+                        font-size: 15px;
+                        line-height: 15px;
+                        color: $black;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                }
+                &.ems-signup{
+                    max-width: 520px;
+                    display: none;
+                    text-align: left;
+                    .ems-signup-header{
+                        font-family: $fontDefault;
+                        font-size: 15px;
+                        line-height: 15px;
+                        color: $black;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                }
+                @at-root{
+                    .ems-signup-body &{
+                        &.ems-signup{
+                            display: block;
+                        }
+                        &.ems-login{
+                            @extend .flipOutY;
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .btn-login-page{
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                width: 100%;
+            }
+        }
     }
 }

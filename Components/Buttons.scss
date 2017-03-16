@@ -1,4 +1,5 @@
-a.btn{
+a.btn,
+a.btnDefault{
     display: inline-block;
     vertical-align: top;
     padding: 13px 23px;
@@ -8,7 +9,15 @@ a.btn{
     letter-spacing: 0.3px;
     font-weight: 600;
     font-family: $fontDefault;
+    border: 1px solid transparent;
 
+    &-wl-icon{
+        span[class^="icon"]{
+            float:left;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+    }
     &-wr-icon{
         span[class^="icon"]{
             float:right;
@@ -16,14 +25,77 @@ a.btn{
             margin-left: 10px;
         }
     }
-
+    &.btnArama,
+    &.btnBultenGonder,
+    &-icon{
+        padding: 0;
+        min-width: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+    &.btnsepeteAt,
+    &-darkBlue{
+        background: $darkBlue;
+        color: $white;
+        text-align: center;
+        border-color: $darkBlue;
+    }
+    &.btnStokHaberci,
+    &-lightGrey{
+        background: $lightGrey;
+        color: $black;
+        text-align: center;
+        border-color: $lightGrey;
+    }
     &-white{
         background: $white;
         color: $black;
         text-align: center;
+        border-color: $white;
     }
-
+    &.btnLogin,
+    &-black{
+        background: $black;
+        color: $white;
+        text-align: center;
+        border-color: $black;
+    }
+    &.btnFacebookLogin{
+        background: $facebookColor;
+        color: $white;
+        text-align: center;
+    }
+    &.btnFacebookLogin,
+    &.btnStokHaberci,
+    &.btnsepeteAt,
+    &-full{
+        width: 100%;
+    }
     &-text{
         min-width: 0;
+    }
+    &.btnStokHaberci,
+    &.btnsepeteAt,
+    &-mL{
+        padding: 16.5px 15px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+    }
+    &-border{
+        background: none;
+    }
+
+    &.btnFacebookLogin{
+        padding: 11.5px;
+        span{
+            display: inline-block;
+            vertical-align: middle;
+            height: 25px;
+            line-height: 22px;
+        }
+        span[class*="icon-"]{
+            font-size: 20px;
+            margin-right: 10px;
+        }
     }
 }

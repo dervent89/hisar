@@ -133,8 +133,8 @@ input[type="checkbox"], input[type="radio"] {
         }
         & + span,
         & + label{
-            font-family: $fontSite;
-            font-size: 15px;
+            font-family: $fontDefault;
+            font-size: 13px;
             line-height: 20px;
             color: #000;
             padding-left: 35px;
@@ -193,7 +193,7 @@ input[type="checkbox"], input[type="radio"] {
         }
         .ems-field {
             max-width: 425px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             position: relative;
             @at-root .pageSiparisOnay_chkOnBilgilendirmeForm .checkbox,
             .checkbox{
@@ -252,14 +252,15 @@ input[type="checkbox"], input[type="radio"] {
                     }
             }
             .ems-form-label {
-                font-size: 16px;
+                font-size: 15px;
                 color: $colorDefault;
                 line-height: 30px;
-                font-family: $fontSite;
+                font-family: $fontDefault;
+                font-weight: 600;
                 position: absolute;
                 top: 23px;
                 left: 0;
-                padding-left: 10px;
+                padding-left: 5px;
                 pointer-events: none;
                 @include transition(all 0.2s ease-in-out);
                 .zorunluFont:before {content:'*'; font-family: 'proximaBold';}
@@ -313,15 +314,15 @@ input[type="checkbox"], input[type="radio"] {
                     top: 5px;
                     padding-left: 0;
                     line-height: 15px;
-                    font-size: 12px;
-                    color: #c9c9c9;
+                    font-size: 13px;
+                    color: #979797;
                 }
                 [id$="lbfUYE_KONTROLKODU"]{
                     top: 61px !important;
                     padding-left: 0 !important;
                     line-height: 15px !important;
-                    font-size: 12px !important;
-                    color: #c9c9c9 !important;
+                    font-size: 13px !important;
+                    color: #979797 !important;
                 }
             }
             

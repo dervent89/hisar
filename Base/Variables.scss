@@ -33,9 +33,11 @@ $black: #323232;
 $pink: #ed3058;
 $pink2: #ff85c2;
 $blue: #2590ff;
+$darkBlue: #242f4f;
 $aqua: #a4ffe5;
 $yellow: #ffda44;
 $orange: #ff9147;
+$facebookColor: #304b92;
 
 $colorDefault: $black;
 $colorWhite: $white;
@@ -89,19 +91,58 @@ $singleOuter: 1.6rem;
 .text-right{text-align: right;}
 .text-center,
 .center{text-align: center;}
-
+.pageLogin_btnFacebookLogin,
+.tableFull{
+    display: block;
+    width: 100%;
+    table{
+        display: block;
+        width: 100%;
+    }
+    tbody{
+        display:block;
+        width: 100%;
+        > tr{
+            display:block;
+            width: 100%;
+            > th,
+            > td{
+                display:block;
+                width: 100%;
+            }
+        }
+    }
+}
 /* Modules Vail */
 .vail{
     position: fixed;
-    top: 0;
+    top: 143px;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    background:rgba( $colorDefault, 0.2 );
     display: none;
     opacity: 0;
+    background:rgba( $colorDefault, 0.2 );
     @include transition($transition: all 0.2s ease-out);
     z-index: 10;
+    &.vail-mini-cart{
+        top: 0;
+    }
+}
+.main-menu-opened,
+.mini-login-ready,
+.mini-cart-ready{
+    overflow-y: scroll;
+    position: fixed;
+    width: 100%;
+}
+.main-menu-opened .vail-main-menu,
+.mini-login-ready .vail-mini-login,
+.mini-cart-ready .vail-mini-cart{
+    display: block;
+    opacity: 1;
 }
 
 ::-webkit-input-placeholder { 

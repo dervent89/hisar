@@ -1,6 +1,7 @@
 @include fontFace('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
 
 $icomoon-font-path: "fonts" !default;
+$icon-share: "\e924";
 $icon-angle-down: "\e900";
 $icon-angle-left: "\e901";
 $icon-angle-right: "\e902";
@@ -54,6 +55,11 @@ a.btnFacebookLogin:before,
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-share {
+  &:before {
+    content: $icon-share;
+  }
 }
 .icon-angle-down {
   &:before {

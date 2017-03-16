@@ -1,0 +1,265 @@
+.mod-mini-cart{
+    display: inline-block;
+    vertical-align: top;
+    &-inner{
+
+    }
+    &-header{
+        font-family: $fontDefault;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        color: $black;
+        > .ems-cart-info{
+            display: inline-block;
+            vertical-align: top;
+            font-size: 16px;
+            font-family: $fontDefault;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            line-height: 15px;
+            padding: 0 0 0 12px;
+            cursor:pointer;
+            position: relative;
+            > span[id$="lbfKUTU_SEPET"]{
+                position: relative;
+                padding: 2px 3px 20px 3px;
+                display: block;
+                &:after{
+                    content:'';
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 0;
+                    opacity: 0;
+                    background: $pink;
+                    bottom: 0;
+                    left: 0;
+                    @include transition(all 0.12s ease-in-out);
+                }
+                span{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .icon-bag{
+                    font-size: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    margin-right: 15px;
+                }
+                .text{
+                    height: 20px;
+                    line-height: 20px;
+                }
+            }
+            > #lblUrunAdet{
+                position: absolute;
+                top: -3px;
+                left: 26px;
+                background: $pink;
+                color: $white;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                font-size: 12px;
+                font-family: $fontDefault;
+                letter-spacing: 0.2px;
+                text-align: center;
+                line-height: 18px;
+            }
+            &:hover{
+                span{
+                    &:after{
+                        height: 6px;
+                        opacity: 1;
+                    }
+                }
+            }
+            @media screen and (max-width: 1010px){
+                padding-left: 9px;
+            }
+        }
+    }
+    &-wrapper{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 450px;
+        background: rgba(255,255,255,0.95);
+        z-index: 9999;
+        @include setTransform(translateX(100%));
+        @include transition(all 0.4s ease-in-out);
+        overflow: hidden;
+        padding: 118px 0 150px 0;
+        @at-root{
+            .mini-cart-ready &,
+            .opened &{
+                @include setTransform(translateX(0));
+            }
+        }
+        .mmc-header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 118px;
+            padding: 50px 20px 0 20px;
+            text-align: center;
+            > span{
+                display: inline-block;
+                vertical-align: middle;
+                width: 100%;
+                text-align: center;
+                font-size: 20px;
+                font-weight: 700;
+                > span{
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 25px;
+                    line-height: 26px;
+                    &[class*="icon-"]{
+                        font-size: 25px;
+                        margin-right: 7px;
+                    }
+                }
+            }
+        }
+        .mod-mini-cart-body{
+            position: relative;
+            width: 100%;
+            max-height: 100%;
+            overflow: auto;
+            padding: 10px 30px;
+            .kutuSepet_icerik{
+                > .ems-col{
+                    position: relative;
+                    width: 100%;
+                    display: inline-block;
+                    vertical-align: top;
+                    padding-left: 120px;
+                    min-height: 120px;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                    &:after{
+                        content:'';
+                        display: block;
+                        width: 90%;
+                        left: 5%;
+                        bottom: 0;
+                        height: 1px;
+                        background: #e9e9e9;
+                        position: absolute;
+                    }
+                    .cart-prd-image{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100px;
+                        overflow: hidden;
+                    }
+                    .cart-prd-remove{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        > a{
+                            display: block;
+                            width: 15px;
+                            height: 15px;
+                            text-align: center;
+                            line-height: 15px;
+                            color: #d1d1d1;
+                            &:after{
+                                content:$icon-close;
+                                @extend .icon;
+                                display: inline-block;
+                                vertical-align: top;
+                                
+                            }
+                            > i{
+                                display: none;
+                            }
+                        }
+                    }
+                    .cart-prd-name{
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 100%;
+                        font-family: $fontDefault;
+                        font-weight: 600;
+                        font-size: 16px;
+                        letter-spacing: 0.3px;
+                        color: $black;
+                        overflow: hidden;
+                        max-height: 38px;
+                    }
+                    .cart-prd-quantity{
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 100%;
+                        margin-top: 5px;
+                        &:after{
+                            content:'adet';
+                            font-size: 15px;
+                            font-weight: 600;
+                            letter-spacing: 0.3px;
+                            color: $black;
+                            display: inline-block;
+                        }
+                        input{
+                            display: inline-block;
+                            line-height: 1;
+                            width: 15px;
+                            height: auto;
+                            min-width: 0;
+                            background: none;
+                            border: none;
+                            margin: 0;
+                            padding: 0;
+                            font-family: $fontDefault;
+                            font-size: 15px;
+                            font-weight: 600;
+                            letter-spacing: 0.3px;
+                            color: $black;
+                        }
+                        .iControl{
+                            display: none;
+                        }
+                    }
+                    .cart-prd-price{
+                        position: absolute;
+                        bottom: 20px;
+                        left: 120px;
+                        display: inline-block;
+                        vertical-align: top;
+                        height: 25px;
+                        line-height: 25px;
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 22px;
+                        letter-spacing: 0.4px;
+                        .d{
+                            font-size: 12px;
+                            letter-spacing: 0.2px;
+                        }
+                        .pb1{
+                            display: inline-block;
+                            vertical-align: bottom;
+                            font-size: 12px;
+                            letter-spacing: 0.2px;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .mod-mini-cart-footer{
+            position: absolute;
+            width: 100;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+}

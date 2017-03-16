@@ -175,27 +175,39 @@
         }
     }
 }
+.ems-prd-icons{
+    padding: 12px 0;
+    > div{
+        font-size: 12px;
+        line-height: 12px;
+        font-family: $fontDefault;
+        font-weight: 600;
+        display: none;
+        
+    }
+    @at-root .indirimli{
+        .prd-icon-discount,
+        .urunListe_pnlIndirimOran{
+            display: block !important;
+            color: $pink;
+        }
+        
+    }
+    @at-root .yeniUrun{
+        .prd-icon-new,
+        .urunListe_yeniUrun{
+            display: block !important;
+        }
+    }
+}
+
 .emosInfinite{
     display: inline-block;
     vertical-align: top;
     width: 100%;
     position: relative;
     > li{
-        &.indirimli{
-            .ems-prd-icons{
-                .urunListe_pnlIndirimOran{
-                    display: block !important;
-                    color: $pink;
-                }
-            }
-        }
-        &.yeniUrun{
-            .ems-prd-icons{
-                .urunListe_yeniUrun{
-                    display: block !important;
-                }
-            }
-        }
+        
         .ems-prd-inner{
             position: relative;
             display: block;
@@ -210,13 +222,6 @@
                     left: 0;
                     z-index: 1;
                     padding: 12px;
-                    > div{
-                        font-size: 12px;
-                        line-height: 12px;
-                        font-family: $fontDefault;
-                        font-weight: 600;
-                        display: none;
-                    }
                 }
                 &-code{
                     display: none;

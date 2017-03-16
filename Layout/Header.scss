@@ -245,18 +245,6 @@
                         left:-40px;
                     }
                 }
-                &:after{
-                    content:'';
-                    display: none;
-                    position: fixed;
-                    width: 100%;
-                    left: 0;
-                    bottom: 0;
-                    top: 143px;
-                    background: #d8d8d8;
-                    opacity: 0.6;
-                    z-index: 99;
-                }
                 &:first-child{
                     > a{
                         padding-left: 0;
