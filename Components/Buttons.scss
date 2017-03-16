@@ -10,21 +10,23 @@ a.btnDefault{
     font-weight: 600;
     font-family: $fontDefault;
     border: 1px solid transparent;
-
+    &.btnAdresEkle,
     &-wl-icon{
-        span[class^="icon"]{
+        [class^="icon"]{
             float:left;
             font-size: 12px;
             margin-right: 10px;
         }
     }
     &-wr-icon{
-        span[class^="icon"]{
+        [class^="icon"]{
             float:right;
             font-size: 12px;
             margin-left: 10px;
         }
     }
+    &.btnAdresListeGuncelle,
+    &.btnAdresListeSil,
     &.btnArama,
     &.btnBultenGonder,
     &-icon{
@@ -53,6 +55,8 @@ a.btnDefault{
         text-align: center;
         border-color: $white;
     }
+    &.btnUyeBilgi,
+    &.btnYeniUyeKaydet,
     &.btnLogin,
     &-black{
         background: $black;
@@ -71,8 +75,17 @@ a.btnDefault{
     &-full{
         width: 100%;
     }
+    &.btnAdresEkle,
     &-text{
+        padding-left: 0;
+        padding-right: 0;
         min-width: 0;
+    }
+    &.btnAdresListeGuncelle,
+    &.btnAdresListeSil,
+    &.btnAdresEkle, 
+    &-grey-2{
+        color: #a0a0a0;
     }
     &.btnStokHaberci,
     &.btnsepeteAt,
@@ -86,6 +99,8 @@ a.btnDefault{
     }
 
     &.btnFacebookLogin{
+        max-width: 355px;
+        margin: 0 auto;
         padding: 11.5px;
         span{
             display: inline-block;

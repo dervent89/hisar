@@ -130,6 +130,9 @@ figure{margin: 0;font-size: 0;}
 }
 .ems-message-error, .pageLogin_yeniUyelikHata, .pageErrorUyeSifre, .pageErrorSifremiUnuttum, .ems-page-new-address .pageErrorDefault {
 	background: #ed1275;
+	&:empty{
+		display: none;
+	}
 }
 .ems-message-success, [id$="pnlBasariliGuncellendi"].pageErrorUyeSifre, .pageSifremiUnuttum_mesaj {
 	background: #107600;
@@ -146,18 +149,22 @@ figure{margin: 0;font-size: 0;}
 
 }
 
-.page-top-title, .pageHeaderDefault {
+.page-top-title,
+.pageHeaderDefault {
     position: relative;
     display: block;
-    font-family: $fontDefault;
-    font-size: 35px;
-    + .page-top-desc, + .pageDescDefault {
+    font-family: $fontSite;
+    font-size: 15px;
+	color: $black;
+	margin-bottom: 25px;
+    + .page-top-desc,
+	+ .pageDescDefault {
         margin-top: 20px;
     }
 }
 .page-top-desc, .pageDescDefault {
     font-family: $fontDefault;
-	font-size: 17px;
+	font-size: 14px;
 	color: $colorDefault;
 	padding-bottom: 34px;
 	&-border {

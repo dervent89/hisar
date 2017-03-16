@@ -159,6 +159,7 @@
                         color: $black;
                         font-weight: 600;
                         text-align: center;
+                        margin-bottom: 20px;
                     }
                 }
                 &.ems-signup{
@@ -172,6 +173,7 @@
                         color: $black;
                         font-weight: 600;
                         text-align: center;
+                        margin-bottom: 20px;
                     }
                 }
                 @at-root{
@@ -191,6 +193,119 @@
                 vertical-align: middle;
                 text-align: center;
                 width: 100%;
+                .btnUyeOl{
+                    span{
+                        font-weight: 700;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ems-page-member{
+   .ems-page-default{
+       padding: 45px 0 45px 60px;
+       .ems-page-default{
+           padding-left: 0;
+           padding-right: 0;
+       }
+   }
+   // Adreslerim
+   .ems-grid-address{
+       max-width: 550px;
+       .ems-grid-row{
+           width: 100%;
+           border: 1px solid #c6c6c6;
+           padding: 20px;
+           display: inline-block;
+           vertical-align: top;
+           margin-bottom: 30px;
+           position: relative;
+           .col-1{
+               float: left;
+               max-width: 77%;
+               .ems-address-name{
+                   font-family: $fontDefault;
+                   font-size: 15px;
+                   font-weight: 600;
+                   color: $black;
+                   margin-bottom: 7px;
+               }
+               .ems-address{
+                   font-family: $fontDefault;
+                   font-size: 15px;
+                   color: #a0a0a0;
+                   line-height: 18px;
+                   font-weight: 500;
+                   br{
+                       display: none;
+                   }
+               }
+           }
+           .col-2{
+               float: right;
+               max-width: 33%;
+           }
+       }
+   }
+}
+
+.member-menu{
+    position: relative;
+    width: 100%;
+    padding-right: 10px;
+    h4{
+        display: block;
+        margin: 0;
+        padding: 20px 30px;
+        font-family: $fontDefault;
+        font-size: 18px;
+        font-weight: 700;
+        color: $black;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .dropdown{
+        position: relative;
+        width: 100%;
+        > span{
+            display: none;
+        }
+        > ul{
+            padding: 10px 30px;
+            > li{
+                display: block;
+                width: 100%;
+                position: relative;
+                > a{
+                    display: inline-block;
+                    vertical-align: top;
+                    font-size: 14px;
+                    font-weight: 600;
+                    font-family: $fontDefault;
+                    padding: 7px 0;
+                    &:before{
+                        content:'';
+                        display: block;
+                        width: 4px;
+                        height: 4px;
+                        background: $pink;
+                        position: absolute;
+                        left: -12px;
+                        top: 13px;
+                        border-radius: 3px;
+                        display: none;
+                    }
+                }
+                &.selected{
+                    > a{
+                        color: $pink;
+                        &:before{
+                            display: block;
+                        }
+                    }
+                }
             }
         }
     }
