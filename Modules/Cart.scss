@@ -260,6 +260,88 @@
             bottom: 0;
             left: 0;
             right: 0;
+            max-height: 150px;
+            padding: 0 48px 45px 48px;
+            > span{
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+                line-height: 35px;
+                height: 55px;
+                font-size: 17px;
+                padding: 0 10px 20px 10px;
+                font-weight: 700;
+                &[id$="lbfkutuSepet1"]{
+                    letter-spacing: 0.3px;
+                    color: $black;
+                }
+                &[id$="UrunTutari"]{
+                    color:#7a7a7a;
+                    text-align: right;
+                    .d{
+                        font-size: 14px;
+                    }
+                    .pb1{
+                        display: inline-block;
+                        font-size: 14px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ems-page-cart{
+    position: relative;
+    width: 100%;
+    > .section-row-1{
+        position: relative;
+        width: 100%;
+        background: #e7e7e7;
+        padding: 20px 0;
+        margin-top: 28px;
+    }
+}
+// Sipariş Adımları
+.tabloTabBtnAdimSiparis{
+    padding: 0 40px;
+    @extend .tableFull;
+    > tbody{
+        > tr{
+            > td{
+                > span{
+                    width: 33.33%;
+                    display: inline-block;
+                    vertical-align: top;
+                    color: #adadad;
+                    .icon{
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 37px;
+                        height: 37px;
+                        margin-right: 20px;
+                        text-align: center;
+                        line-height: 37px;
+                        font-size: 37px;
+                    }
+                    .text{
+                        display: inline-block;
+                        vertical-align: middle;
+                        height: 37px;
+                        line-height: 37px;
+                        font-size: 14px;
+                        letter-spacing: 0.3px;
+                        font-weight: 600;
+                    }
+                    &:first-child{
+                        text-align: left;
+                    }
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+            }
         }
     }
 }

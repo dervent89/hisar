@@ -1,5 +1,6 @@
-a.btn,
-a.btnDefault{
+.lnkSepet,
+.btn,
+.btnDefault{
     display: inline-block;
     vertical-align: top;
     padding: 13px 23px;
@@ -10,6 +11,8 @@ a.btnDefault{
     font-weight: 600;
     font-family: $fontDefault;
     border: 1px solid transparent;
+    &.btnTakipListeStokTumSil,
+    &.btnFavoriListeTumSil,
     &.btnAdresEkle,
     &-wl-icon{
         [class^="icon"]{
@@ -25,6 +28,8 @@ a.btnDefault{
             margin-left: 10px;
         }
     }
+    &.btnTakipListeStokSil,
+    &.btnFavoriListeSil,
     &.btnAdresListeGuncelle,
     &.btnAdresListeSil,
     &.btnArama,
@@ -35,6 +40,8 @@ a.btnDefault{
         text-align: center;
         line-height: 50px;
     }
+    &.btnSepeteAtFavori,
+    &.lnkSepet,
     &.btnsepeteAt,
     &-darkBlue{
         background: $darkBlue;
@@ -42,6 +49,7 @@ a.btnDefault{
         text-align: center;
         border-color: $darkBlue;
     }
+    &.btnStokHaberciFavori,
     &.btnStokHaberci,
     &-lightGrey{
         background: $lightGrey;
@@ -55,6 +63,7 @@ a.btnDefault{
         text-align: center;
         border-color: $white;
     }
+    &.btnSifreGuncelle,
     &.btnUyeBilgi,
     &.btnYeniUyeKaydet,
     &.btnLogin,
@@ -69,18 +78,24 @@ a.btnDefault{
         color: $white;
         text-align: center;
     }
+    &.lnkSepet,
     &.btnFacebookLogin,
     &.btnStokHaberci,
     &.btnsepeteAt,
     &-full{
         width: 100%;
     }
+    &.btnTakipListeStokTumSil,
+    &.btnFavoriListeTumSil,
     &.btnAdresEkle,
     &-text{
         padding-left: 0;
         padding-right: 0;
         min-width: 0;
     }
+    &.btnTakipListeStokTumSil,
+    &.btnTakipListeStokSil,
+    &.btnFavoriListeTumSil,
     &.btnAdresListeGuncelle,
     &.btnAdresListeSil,
     &.btnAdresEkle, 

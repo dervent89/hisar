@@ -1,0 +1,691 @@
+.ems-grid-default {
+    > div {
+        position: relative;
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        > div {
+            display: table-cell;
+            position: relative;
+            vertical-align: middle;
+        }
+    }
+    .ems-grid-header {
+        position: relative;
+        border-bottom: 1px solid #eaeaea;
+        display: none;
+        &:first-child{
+            display: table;
+            padding: 0 25px;
+        }
+        > div {
+            font-family: $fontDefault;
+            font-size: 13px;
+            color: #979797;
+            padding: 12px 0;
+            text-align: center;
+            letter-spacing: 1px
+        }
+    }
+    .ems-grid-row {
+        position: relative;
+        border-bottom: 1px solid #eaeaea;
+        border-left: 1px solid #eaeaea;
+        border-right: 1px solid #eaeaea;
+        padding: 10px 25px;
+        > div {
+            font-family: $fontDefault;
+            font-size: 15px;
+            color: $black;
+            padding: 10px 0;
+            &:first-child {
+                border-left-width: 1px;
+            }
+        }
+        &:last-child {
+            > div {
+                border-bottom-width: 1px;
+            }
+        }
+        //grid items
+        .ems-grid-img {
+            a, img {
+                display: block;
+            }
+        }
+        .ems-grid-fav {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.85);
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            left: 10px;
+            top: 100px; 
+            border-radius: 100%;
+            > a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                span {
+                    display: block;
+                    height: 100%;           
+                    i {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        font-size: 19px;
+                        color: #000;
+                        font-weight: bold;
+                        margin-top: -9.5px;
+                        margin-left: -9.5px;
+                        @include transition(all 0.2s ease);
+                    }
+                }
+            }
+            &:hover {
+                i {
+                    @include setTransform(scale(1.2));
+                }
+            }
+        }
+        .ems-grid-name {
+            font-family: $fontDefault;
+            font-size: 18px;
+        }
+        .ems-grid-gift-box {
+            margin-top: 17px;
+            font-size: 16px;
+            color: $darkBlue;
+            i {
+                position: relative;
+                top: 1px;
+                margin-right: 5px;
+            }
+        }
+        .ems-grid-piece {
+            text-align: center;
+            > input {
+                width: 85px !important;
+                height: 50px;
+                line-height: 50px;
+                padding-right: 25%;
+                text-align: center;
+            }
+            > a {
+                position: absolute;
+                left: 70%;
+                font-size: 11px;
+                color: #b7b7b7;
+                padding: 5px;
+                &:first-child {
+                    top: 54px;
+                }
+                &:last-child {
+                    top: 30px;
+                }
+                i {
+                    vertical-align: middle;
+                }
+            }
+        }
+        .ems-grid-delete {
+            i {
+                margin-right: 9px;
+                font-size: 12px;
+            }
+        }
+        .ems-grid-price-total,
+        .ems-grid-price {
+            text-align: center;
+            .brFiyat,
+            .satBrFiyat,
+            .topFiyat,
+            .netFiyat{display: none !important;}
+            .brFiyatVrg,
+            .satBrFiyatVrg,
+            .topFiyatVrg,
+            .netFiyatVrg{
+                display: inline-block !important;
+            }
+            .gridSepetListe_gercekFiyat {
+                position: relative;
+                display: block;
+                color: #8F8F8F;
+                    &:after {
+                        content: "";
+                        border-top: 1px solid;
+                        width: 60%;
+                        position: absolute;
+                        left: 20%;
+                        top: 50%;
+                        @include setTransform(rotate(-11.25deg));
+                    }
+            }
+        }
+        .ems-grid-price-total > span > span {
+            display: block;
+            position: relative;
+                &:first-child:after {
+                    /*content: "";*/
+                    border-top: 1px solid;
+                    width: 60%;
+                    position: absolute;
+                    left: 20%;
+                    top: 50%;
+                    -webkit-transform: rotate(-11.25deg);
+                    -ms-transform: rotate(-11.25deg);
+                    transform: rotate(-11.25deg);
+                }
+        }
+        
+    }
+}
+
+//grid types
+//td ilk ve sonda border var
+.ems-grid-address {
+    .ems-grid-row {
+        > div {
+            border-right-width: 0;
+            &:last-child {
+                border-right-width: 1px;
+            }
+        }
+    }
+}
+//her td 'de bottom border var, ayrı tr 'ler
+.ems-grid-address {
+    .ems-grid-row {
+        margin-bottom: 12px;
+        > div {
+            border-bottom-width: 1px;
+        }
+    }
+}
+//full icerik ortala
+.ems-grid-favorites, .ems-grid-refund, .ems-page-member-follow-list .ems-grid-default, .ems-grid-order, .ems-grid-order-products, .ems-grid-message {
+    > div > div {
+        text-align: center;
+    }
+}
+//urun gorsel boyut
+.ems-grid-favorites, .ems-grid-refund, .ems-page-member-follow-list .ems-grid-default, .ems-grid-order-products {
+    .ems-grid-row > div {
+        &.ems-grid-img img {
+            width: 90px;
+            margin: 0 auto;
+        }
+    }
+}
+//adet input
+.ems-page-member-favorites{
+    .favorite-report{
+        .select-cfg{
+            display: none;
+        }
+    }
+}
+.ems-grid-favorites {
+    .ems-grid-header{
+        display: none !important;
+    }
+    .ems-grid-row {
+        border-top: 1px solid #eaeaea;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        &:last-child{border-bottom: 1px solid #eaeaea;}
+        .ems-grid-pieces,
+        .ems-grid-select{
+            display: none;
+        }
+        .ems-grid-name{
+            width: 40%;
+            text-align: left;
+            padding: 0 5px 0 10px;
+        }
+        .ems-grid-cartto{
+            width: 33%;
+        }
+        .ems-grid-remove{
+            width: 7%;
+            a{
+                color: #d1d1d1;
+            }
+        }
+        .ems-grid-img{width: 10%;}
+        .ems-grid-price{
+            width: 15%;
+            padding: 0 5px;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0.4px;
+            .pb1,
+            .d{
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 12px;
+                letter-spacing: 0.3px;
+
+            }
+            [id$="lbfURN_KDVDAHIL"]{
+                display: none;
+            }
+        }
+    }
+}
+
+//grid custom
+//sepet
+.ems-grid-cart {
+    & > .ems-grid-row,
+    & > .ems-grid-header{
+        padding-left: 125px;
+        padding-right: 70px;
+        .ems-grid-delete,
+        .ems-grid-img{display: none;}
+        .ems-grid-name{width: 45%;}
+        .ems-grid-price,
+        .ems-grid-price-total{width: 18%;}
+        .ems-grid-piece {width: 19%;}
+    }
+    
+    .ems-grid-row {
+        position: relative;
+        br{
+            display: none;
+        }
+        > div {
+            float:left;
+            display: table;
+            height: 100px;
+            padding: 0;
+                & > span{
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 100px;
+                    padding: 0 10px;
+                }
+        }
+        .ems-grid-img {
+            display: block;
+            text-align: center;
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            a, img {
+                margin:0 auto;
+                width: auto;
+                max-height: 100px;
+            }
+        }
+        .ems-grid-fav{
+            display: none !important;
+        }
+        .ems-grid-name {
+                br{
+                    display: none;
+                }
+                a {
+                    span{
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        line-height: 20px;
+                        color:#eaeaea;
+                        display: block;
+                            &:before{
+                                /*content: $langTR_renk;*/
+                                margin-right: 5px;
+                            }
+                    }
+                    .prdItem{
+                        color: #000;
+                        font-size: 16px;
+                        line-height: 23px;
+                        text-transform: uppercase;
+                            &:before{
+                                display: none;
+                            }
+                    }
+                }
+                [id$="lblProm"]{
+                    display: block;
+                    width: 100%;
+                        ul{
+                            display: block;
+                            width: 100%;
+                                & > li{
+                                    display: block;
+                                    width: 100%;
+                                        span.prom_ad{
+                                            color: #dd0d63;
+                                            font-size: 14px;
+                                            font-family: $fontDefault;
+                                            margin-top: 5px;
+                                        }
+                                        span.prom_indtutar{
+                                            display: none;
+                                        }
+                                }
+                        }
+                }
+                .urunKategori{
+                    display: none;
+                }
+        }
+        .ems-grid-price,
+        .ems-grid-price-total {
+                > span {
+                    font-family: $fontDefault;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 22px;
+                    letter-spacing: 0.8px;
+                    color: #1a1a1a;
+                        .d{
+                            font-size: 12px;
+                            letter-spacing: 0.7px;
+                            vertical-align: super;
+                        }
+                }
+        }
+        .ems-grid-piece {
+                > span{
+                        > span{
+                            display: block;
+                            margin: 0 auto;
+                            position: relative;
+                            width: 60px;
+                        }
+                }
+                [id$="txtURN_ADET"]{
+                    border: none !important;
+                    margin-top: 0;
+                    text-align: center;
+                    padding: 0;
+                }
+                .ems-grid-piece-add-remove{
+                    position: relative;
+                        a{
+                            position: absolute;
+                            top: 0;
+                            font-size: 18px;
+                            width: 15px;
+                            height: 33px;
+                            text-align: center;
+                            line-height: 33px;
+                                img{
+                                    display: none;
+                                }
+                                &:first-child{
+                                    right: 0;
+                                    &:after{
+                                        content: '+';
+                                    }
+                                }
+                                &:last-child{
+                                    left: 0;
+                                    &:after{
+                                        content: '-';
+                                    }
+                                }
+                        }
+                }
+        }
+        .ems-grid-delete{
+            display: block;
+            position: absolute;
+            right: 25px;
+            top: 25px;
+                a{
+                    i {
+                        font-size: 17px;
+                    }
+                    span > span{
+                        display: none;
+                    }
+                }
+        }
+    }
+}
+.ems-grid-order{
+    .ems-grid-row{
+        .ems-grid-order-no{
+            a{
+                font-weight: 600;
+                text-decoration: underline;
+            }            
+        }
+    }
+}
+//stok
+.gridSepetStok {
+    margin: 30px 0;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    th, td {
+        border: 1px solid #eee;
+        text-align: center;
+        padding: 10px 5px;
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+//teslimat
+.ems-grid-address {
+    margin-bottom: 20px;
+    .ems-grid-row {
+        padding: 15px 290px 15px 26px;
+        margin-bottom: 0;
+        &.selected {
+            
+        }
+        .col-1 {
+            width: 70%;
+                .ems-address{
+                    font-size: 15px;
+                    line-height: 20px;
+                    color: #9e9e9e;
+                    max-width: 310px;
+                    word-break: break-all;
+                        &-name{
+                            display: block;
+                            width: 100%;
+                            margin-bottom: 10px;
+                                span{
+                                    display: block;
+                                    width: 100%;
+                                        &.name{
+                                            font-size: 16px;
+                                            letter-spacing: 1.8px;
+                                            color: #000;
+                                        }
+                                        &.type{
+                                            display: none !important;
+                                            font-family: $fontSite;
+                                            font-size: 13px;
+                                            line-height: 20px;
+                                            letter-spacing: 1.2px;
+                                            color: #666;
+                                            text-transform: uppercase;
+                                        }
+                                }
+                        }
+                }
+        }
+        .col-2 {
+            width: 250px;
+            height: 126px;
+            display: inline-block;
+            vertical-align: top;
+            position: absolute;
+            right: 30px;
+            top: 15px;
+                .item-1{
+                    float: left;
+                    width: 85px;
+                    height: 106px;
+                    a{
+                        color: #c9c9c9;
+                        font-size: 15px;
+                        display: inline-block;
+                        padding: 5px;
+                        margin: 5px;
+                        @include vAlign;
+                            &.btnAdresListeGuncelle{
+                                span{
+                                    display: none;
+                                }
+                            }
+                            &.btnAdresListeSil > span > span{
+                                display: none;
+                            }
+                    }
+                }
+                .item-2{
+                    float: right;
+                    width: 165px;
+                    a{
+                        text-transform: uppercase;
+                        padding-right: 0;
+                        padding-left: 0;
+                            i{
+                                display: none;
+                            }
+                            &.btnTesAdrSec{
+                                margin-bottom: 10px;
+                            }
+                    }
+                }
+        }
+        @media screen and (max-width: $deviceMobile){
+            padding: 20px 30px;
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            .col-1{
+                width: 100%;
+                display: inline-block;
+                vertical-align: top;
+            }
+            .col-2{
+                width: 100%;
+                display: inline-block;
+                vertical-align: top;
+                height: auto;
+                position: relative;
+                right: inherit;
+                top: inherit;
+                    .item-1{
+                        display: none;
+                    }
+                    .item-2{
+                        width: 100%;
+                        height: auto;
+                            a{
+                                padding-right: 40px;
+                                padding-left: 30px;
+                                display: inline-block;
+                                width: initial;
+                                margin-bottom: 0;
+                                    &.btnTesAdrSec{
+                                        margin-right: 15px; 
+                                    }
+                            }
+                    }
+            }
+        }
+    }
+}
+
+//mesajlarım
+.ems-grid-message {
+    .ems-grid-row > div {
+        a {
+            display: none;
+        }
+        a.emos_invisible {
+            display: inline-block !important;
+        }
+    }
+}
+
+//sifremi unuttum
+.tableSifremiUnuttum {
+    width: 100%;
+    & > tbody,
+    & > tbody > tr {
+            display: block;
+            width: 100%;
+                th{
+                    width: 100%;
+                    display: block;
+                    text-align: left;
+                        & > span{
+                            font-family: "proximaRegular";
+                            line-height: 15px;
+                            font-size: 12px;
+                            color: #c9c9c9;
+                            font-weight: normal;
+                        }
+                }
+                td{
+                    display: block;
+                    width: 100%;
+                        [id$="lbfUYE_KONTROLKODU"]{
+                             font-family: "proximaRegular";
+                            line-height: 15px;
+                            font-size: 12px;
+                            color: #c9c9c9;
+                            font-weight: normal;
+                        }
+                        input{
+                            margin-top: 0;
+                            max-width: 420px;
+                        }
+                        a.btnUyeSifreGonder {
+                            max-width: 400px;
+                        }
+                        a.btnUyeSifreGonder {
+                            width: 100%;
+                            margin-top: 10px;
+                        }
+                        &.tableSifremiUnuttum_tdCaptchaImage1 {
+                            padding: 10px 0;
+                            position: relative;
+                                img{
+                                    margin-bottom: 15px;
+                                }
+                                .captchaYenile {
+                                    position: absolute;
+                                    left: 0;
+                                    display: block;
+                                    color: #E91E63;
+                                    font-size: 20px;
+                                    bottom: 17px;
+                                }
+                                input{
+                                    padding-left: 30px;
+                                }
+                        }
+                }
+     }
+}
+
+//siparis-detay
+.ems-grid-order-products {
+    .ems-grid-row .ems-grid-price-total {
+        text-align: center;
+    }
+}
+
+ .remove-list,
+ .ems-liste-remove{
+     display: inline-block;
+     vertical-align: top;
+     width: 100%;
+     text-align: right;
+ }
