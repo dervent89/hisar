@@ -1,6 +1,9 @@
 .site-footer{
     background: #f4f4f4;
     padding: 60px 0 25px 0;
+    @media screen and (max-width: $deviceMobile){
+        background: #e9e9e9;
+    }
     &-row{
         margin-bottom: 50px;
     }
@@ -108,6 +111,17 @@
                     &:hover{
                         color: $pink;
                     }
+                }
+            }
+            @media screen and (max-width: $deviceMobile){
+                display: table;
+                vertical-align: middle;
+                table-layout: fixed;
+                width: calc(100% - 40px);
+                margin: 0 20px;
+                > li{
+                    float: none;
+                    display: table-cell;
                 }
             }
         }

@@ -1,9 +1,7 @@
 @include fontFace('Tiemposheadline', '/styles/fonts/Tiempos/TiemposHeadline-Regular', normal, normal);
 @include fontFace('TiemposHeadline', '/styles/fonts/Tiempos/TiemposHeadline-RegularItalic', normal, italic);
 
-@include fontFace('CentraleSans', '/styles/fonts/Centrale/centrale_sans_bold-webfont', 700, normal);
-@include fontFace('CentraleSans', '/styles/fonts/Centrale/centrale_sans_bold_italic-webfont', 700, italic);
-@include fontFace('CentraleSans', '/styles/fonts/Centrale/centrale_sans_medium-webfont', 600, normal);
-@include fontFace('CentraleSans', '/styles/fonts/Centrale/centrale_sans_medium_italic-webfont', 600, italic);
-@include fontFace('CentraleSans', '/styles/fonts/Centrale/centrale_sans_regular-webfont', normal, normal);
-@include fontFace('CentraleSans', '/styles/fonts/Centrale/centrale_sans_regular_italic-webfont', normal, italic);
+@include fontFace('CentraleSans', '/styles/fonts/Centrale/33705F_3_0', 700, normal);
+@include fontFace('CentraleSans', '/styles/fonts/Centrale/33705F_2_0', 500, italic);
+@include fontFace('CentraleSans', '/styles/fonts/Centrale/33705F_1_0', 600, normal);
+@include fontFace('CentraleSans', '/styles/fonts/Centrale/33705F_0_0', 400, italic);

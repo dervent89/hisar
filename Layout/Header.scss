@@ -3,10 +3,14 @@
     height: auto;
     border-bottom: 1px solid $white-two;
     @media screen and (max-width: $deviceMobile){
+        border-bottom-color: transparent;
         &-inner{
             padding: 0;
             margin: 0;
         }
+    }
+    > .sortable{
+        font-size: 0;
     }
     .left-colm{
         display: inline-block;
@@ -91,6 +95,7 @@
                 margin-left: -50px;
             }
             @at-root .mobile-menu-ready{
+                overflow: hidden;
                 .mobile-menu-btn > span:before {
                     transform: rotate(-45deg);
                     top: 7px !important;
@@ -127,7 +132,7 @@
                     vertical-align: top;
                     .where-is-my-cargo{
                         display: block;
-                        font-family: "CentraleSans";
+                        font-family: $fontDefault;
                         font-size: 14px;
                         height: 15px;
                         color: $black;
@@ -146,12 +151,23 @@
             width: 100%;
             height: 42px;
             .bottom-left-colm{
-                width: 74%;
+                width: calc(100% - 217px);
                 float: left;
+                text-align: right;
+                @media screen and (max-width:1010px){
+                    width: calc(100% - 150px);
+                }
             }
             .bottom-right-colm{
-                max-width: 30%;
+                width: 217px;
                 float: right;
+                [id*='lblBanner']{
+                    display: inline-block;
+                    vertical-align: top;
+                }
+                @media screen and (max-width:1010px){
+                    width: 150px;
+                }
             }
         }
         @media screen and (max-width: $deviceMobile){
@@ -276,7 +292,7 @@
                             @include transition(all 0.12s ease-in-out);
                         }
                     }
-                    @media screen and (max-width: 1010px){
+                    @media screen and (max-width: 1050px){
                         padding: 0 9px;
                     }
                 }
@@ -300,13 +316,13 @@
                 }
                 > .nav-main-sub-nav{
                     display: none;
-                    left: -50px;
+                    left: -60px;
                     position: absolute;
                     padding: 50px;
                     opacity: 0.95;
                     background-color: $white;
                     z-index: 100;
-                    margin-right: -70px;
+                    margin-right: -140px;
                 }
             }
             
@@ -337,12 +353,15 @@
                         color: $pink;
                     }
                 }
+                .lvl3-wrap{
+                    display: table;
+                    table-layout: fixed;
+                    width: 100%;
+                }
             }
         }
         .lvl3{
-            display: inline-block;
-            vertical-align: top;
-            width: 100%;
+            display: table-cell;
             > li{
                 margin-bottom: 5px;
                 > a{
