@@ -958,6 +958,7 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 color:#9d9d9d;
+                pointer-events: none;
               }
               input[type="text"]{
                 width: 100%;
@@ -967,6 +968,7 @@
                 height: 45px;
                 line-height: 45px;
                 padding:0 10px;
+                &:valid + span,
                 &:focus + span{
                   display: none;
                   visibility: hidden;
@@ -1014,10 +1016,10 @@
     .prdSetsHolder{
       display: block;
       ul{
-        width: 550px;
+        width: 700px;
         margin: 0 auto;
         li{
-          width: 50%;
+          width: 33.33%;
           display: inline-block;
           padding: 0 10px;
           position: relative;
