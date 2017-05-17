@@ -2,9 +2,11 @@
     position: relative;
     display: inline-block;
     vertical-align: top;    
+    width: 100%;
     &-title{
         display: inline-block;
         vertical-align: top;
+
     }
     &-body{
         position: absolute;
@@ -19,6 +21,7 @@
         font-size: 15px;
         line-height: 20px;
         @include setTransform(translateX(-50%));
+        white-space: nowrap;
         &:after{
             content:$icon-caret-down;
             display: block;
@@ -238,6 +241,9 @@
 }
 
 .system-widget{
+    &.no-result{
+        display: none;
+    }
     &-wrapper{
         position: relative;
         .swiper-title{

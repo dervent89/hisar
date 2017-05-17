@@ -269,7 +269,7 @@
     }
 }
 .ems-prd-icons{
-    padding: 12px 0;
+    
     > div{
         font-size: 12px;
         line-height: 12px;
@@ -311,7 +311,11 @@
                     top: 0;
                     left: 0;
                     z-index: 1;
-                    padding: 12px;
+                    margin: 5px;
+                    > div{
+                        padding: 5px !important;
+                        background: #fff;
+                    }
                 }
                 &-code{
                     display: none;
@@ -456,7 +460,7 @@
                     display: none;
                 }
                 .urunKiyaslamaOzellik_ozellikIcerik{
-                    padding: 5px 0 14px 65px;
+                    padding: 5px 0 14px 55px;
                     > table,
                     > table > tbody,
                     > table > tbody > tr,
@@ -523,7 +527,7 @@
                 
             }
             > ul{
-                padding: 5px 0 14px 65px;
+                padding: 5px 0 14px 55px;
                 > li{
                     > a{
                         color: #9d9d9d;
@@ -563,6 +567,29 @@
                                 padding: 7px 0;
                                 &.active{
                                     font-weight: 700;
+                                }
+                            }
+                            > ul{
+                                max-height: 0;
+                                overflow: hidden;
+                                padding: 0 0 0 20px;
+                                @include transition(all 0.2s ease-in-out);
+                                > li{
+                                    > a{
+                                        padding: 5px 0;
+                                        display: inline-block;
+                                        vertical-align: top;
+                                        &.active{
+                                            font-weight: 700;
+                                        }
+                                    }
+                                }
+                            }
+                            &.opened{
+                                > ul{
+                                    padding-top: 10px;
+                                    padding-bottom: 10px;
+                                    max-height: 1500px;
                                 }
                             }
                         }

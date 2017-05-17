@@ -1,6 +1,15 @@
 @include fontFace('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
 
-$icomoon-font-path: "fonts" !default;
+$icon-siparis-uzerine: "\e926";
+$icon-10cr-ni-pcelik: "\e925";
+$icon-10pcelik: "\e927";
+$icon-aisi-420-iicelik: "\e929";
+$icon-blsk-hss: "\e92b";
+$icon-can-yalman: "\e92c";
+$icon-ilk-kullanim-yikama: "\e92f";
+$icon-inci-mutlu: "\e930";
+$icon-ind-ocak: "\e933";
+$icon-tm-ocak: "\e934";
 $icon-share: "\e924";
 $icon-angle-down: "\e900";
 $icon-angle-left: "\e901";
@@ -55,6 +64,57 @@ a.btnFacebookLogin:before,
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-siparis-uzerine {
+  &:before {
+    content: $icon-siparis-uzerine;
+  }
+}
+.icon-10cr-ni-pcelik {
+  &:before {
+    content: $icon-10cr-ni-pcelik;
+  }
+}
+.icon-10pcelik {
+  &:before {
+    content: $icon-10pcelik;
+  }
+}
+.icon-aisi-420-iicelik {
+  &:before {
+    content: $icon-aisi-420-iicelik;
+  }
+}
+.icon-blsk-hss {
+  &:before {
+    content: $icon-blsk-hss;
+  }
+}
+.icon-can-yalman {
+  &:before {
+    content: $icon-can-yalman;
+  }
+}
+.icon-ilk-kullanim-yikama {
+  &:before {
+    content: $icon-ilk-kullanim-yikama;
+  }
+}
+.icon-inci-mutlu {
+  &:before {
+    content: $icon-inci-mutlu;
+  }
+}
+.icon-ind-ocak {
+  &:before {
+    content: $icon-ind-ocak;
+  }
+}
+.icon-tm-ocak {
+  &:before {
+    content: $icon-tm-ocak;
+  }
 }
 .icon-share {
   &:before {

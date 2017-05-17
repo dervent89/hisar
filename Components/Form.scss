@@ -179,6 +179,7 @@ input[type="radio"] {
     max-width: 425px;
     &-inner {
         position: relative;
+        
         .row{
             width: 100%;
             max-width: 425px;
@@ -191,6 +192,11 @@ input[type="radio"] {
                         &:last-child{
                             margin-right: 0;
                         }
+                }
+                &.row-3{
+                    .col{
+                        width: 30.66%;
+                    }
                 }
         }
         .ems-field {

@@ -452,21 +452,34 @@
               letter-spacing: 0.2px;
               color: #323232;
               display: inline-block;
+              vertical-align: middle;
+              padding: 10px 10px 15px 10px;
+              position: relative;
+              &:after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                display: inline-block;
+                width: 0;
+                height: 4px;
+                background: #ed3058;
+                opacity: 0;
+                @include transition(all 0.2s ease-in-out);
+                @include setTransform(translateX(-50%));
+                @media screen and (max-width: $deviceMobile){
+                  content: none;
+                }
+              }
               @media screen and (max-width: $deviceMobile){
                 font-size: 18px;
                 line-height: 25px;
                 letter-spacing: 0.2px;
               }
             }
-            &.active a:after{
-              content: "";
-              display: inline-block;
+            &.active > a:after{
               width: 75%;
-              height: 4px;
-              background: #ed3058;
-              @media screen and (max-width: $deviceMobile){
-                content: none;
-              }
+              opacity: 1;
             }
           }
         }
@@ -480,13 +493,16 @@
             margin: 0 20px;
           }
           li{
-            display: inline-block;
+            display: none;
             width: 25%;
             border-right: 1px solid #d4d4d4;
             border-bottom: 1px solid #d4d4d4;
             font-size: 0;
             text-align: center;
             padding: 7px;
+            &.opened{
+              display: inline-block;
+            }
             .refImg{
               width: 75%;
               margin: 0 auto;
@@ -1254,4 +1270,53 @@
       }
   }
 
+}
+
+.KullanimKilavuzlari{
+  > ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    > li{
+      float: left;
+      width: 33.33%;
+    }
+  }
+}
+.press-wrapper{
+  position: relative;
+  width: 100%;
+  > ul{
+    > li{
+      width: 180px;
+      padding: 5px;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.kutuOrderQuery{
+  .kutuHeaderOrderQuery{
+    display: none;
+  }
+  .kutuBodyOrderQuery{
+    margin: 30px auto;
+    width: 100%;
+    max-width: 425px;
+    .kutuOrderQuery_siparisNo,
+    .kutuOrderQuery_email{
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+      > span{
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
 }

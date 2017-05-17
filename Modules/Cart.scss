@@ -24,6 +24,7 @@
             left: 0;
             @include transition(all 0.12s ease-in-out);
         }
+        // Test
         span.text{
             font-family: $fontDefault;
             font-weight: 600;
@@ -50,6 +51,7 @@
             letter-spacing: 0.2px;
             text-align: center;
             line-height: 18px;
+            font-style: normal;
         }
         span.icon-bag{
             font-size: 20px;
@@ -432,9 +434,9 @@
             &.next{
                 text-align: right;
             }
-            .btnSepetGuncelle{
+            /*.btnSepetGuncelle{
                 display: none;
-            }
+            }*/
         }
         .same-address{
             text-align: right;

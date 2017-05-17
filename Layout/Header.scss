@@ -376,6 +376,11 @@
                         color: $black;
                     }
                 }
+                &.f-s-13{
+                    > a{
+                        font-size: 13px !important;
+                    }
+                }
             }
         }
     }

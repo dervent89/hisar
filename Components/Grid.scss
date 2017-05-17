@@ -567,6 +567,13 @@
                 text-decoration: underline;
             }            
         }
+        .ems-grid-add-to-cart{
+            > a{
+                padding-left: 5px;
+                padding-right: 5px;
+                min-width: 140px;
+            }
+        }
     }
     @media screen and (max-width:$deviceMobile){
         > div{
@@ -708,3 +715,28 @@
      width: 100%;
      text-align: right;
  }
+ 
+
+ .large-width{
+     width: 100%;
+     max-width: 425px;
+     margin: 0 auto;
+    
+ }
+ .xmlFormHeader{
+     display: none;
+ }
+ .xmlForm_btnGonder{
+    max-width: 425px;
+    margin: 0 auto;
+}
+.xmlFormError {
+    display: block;
+    width: 100%;
+    max-width: 425px;
+    background: green;
+    color: #fff;
+    padding: 5px;
+    margin: 10px auto;
+    &:empty{display: none;}
+}
