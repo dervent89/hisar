@@ -244,6 +244,26 @@
     &.no-result{
         display: none;
     }
+    &.no-swiper{
+        .swiper-wrapper{
+            display:inline-block;
+            vertical-align:top;
+            width:100%;
+            text-align:center;
+            .swiper-slide {
+                display:inline-block;
+                vertical-align:top;
+                text-align:left;
+                max-width: 23%;
+                @media screen and (max-width:$deviceMobile){
+                    max-width: 32%;
+                }
+                @media screen and (max-width:620px){
+                    max-width: 50%;
+                }
+            }
+        }
+    }
     &-wrapper{
         position: relative;
         .swiper-title{

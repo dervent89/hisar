@@ -563,9 +563,18 @@
     }
 }
 .designer-awards{
+  margin-bottom: 40px;
+  .no-swiper{
+    > ul{
+      > li{
+        max-width: 33.33%;
+      }
+    }
+  }
   li{
     .inner{
       position: relative;
+      background-repeat: no-repeat;
       figcaption{
         position: absolute;
         left: 0;

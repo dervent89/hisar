@@ -612,3 +612,102 @@
         }
     }
 }
+
+
+
+
+.pageGuestCheckout{
+    margin: 0 auto;
+    max-width: 550px;
+    span[id$='lbf_KARGOBILGI'],
+    .divTeslimatKargo,
+    .cart-section-left,
+    .cart-section-right {
+        display:none !important;
+    }
+    .GuestCheckoutContainer {
+        margin-top: 30px;
+    }
+    .ulGuestCheckout_member{
+        > li{
+            position: relative;
+            margin-bottom: 20px;
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            &.country,
+            &.subTitle.b1 {
+                display: none;
+            }
+            &:not(.subTitle){
+                > span {
+                    padding-left: 0;
+                    line-height: 15px;
+                    font-size: 13px;
+                    color: #979797;
+                    white-space: nowrap;
+                    > span{
+                        display: block !important;
+                    }
+                }
+                > div{
+                    *{
+                        margin-top: 5px;
+                    }
+                    > span{
+                        display: block !important;
+                    }
+                    
+                }
+            }
+            &.name{
+                width: 48%;
+                margin-right: 4%;
+            }
+            &.surname{
+                width: 48%;
+            }
+            &.tcNo{
+                > span:first-child{
+                    position: relative;
+                    height: 40px;
+                    line-height: 28px;
+                    > span{
+                        padding-left: 35px;
+                    }
+                }
+                > div{
+                    input{
+                        display: block !important;
+                    }
+                    .checkbox{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        display: inline-block;
+                        vertical-align: top;
+                        padding: 0;
+                        width: 35px;
+                    }
+                }
+            }
+            &.smsFl,
+            &.bultenFl{
+                > div{
+                    .checkbox{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        display: inline-block;
+                        vertical-align: top;
+                        padding: 0;
+                        width: 35px;
+                    }
+                    span:not(.checkbox){
+                        padding-left: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
