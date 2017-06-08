@@ -515,6 +515,123 @@
     }
 }
 
+.firsat-setleri{
+    position: relative;
+    &-header{
+
+    }
+    &-body{
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        .left-colm{
+            float: left;
+            width: calc(100% - 306px);
+            .firsat-setleri-prd-list{
+                width: 100%;
+                > li{
+                    max-width: 32%;
+                    margin-right: 2%;
+                    margin-bottom: 2%;
+                    border: 1px solid transparent;
+                    &:nth-child(3n+3){
+                        margin-right: 0;
+                    }
+                    &.selected{
+                        border-color: $pink;
+                    }
+                }
+            }
+        }
+        .right-colm{
+            width: 306px;
+            float: right;
+            padding-left: 26px;
+            &-header{
+                width: 100%;
+                height: auto;
+                margin-bottom: 25px;
+                margin-top: 20px;
+                text-align: center;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 20px;
+                color: $pink;
+            }
+            .result-products-images{
+                position: relative;
+                width: 100%;
+                display: inline-block;
+                vertical-align: top;
+                > li{
+                    float: left;
+                    width: calc(50% - 10px);
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    font-size: 0;
+                    &:nth-child(even){margin-right: 0;}
+                }
+            }
+            .result-products-name{
+                position: relative;
+                width: 100%;
+                > li{
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 100%;
+                    margin-bottom: 15px;
+                    p{
+                        margin: 0;
+                        padding: 0;
+                        letter-spacing: 0.3px;
+                        line-height: 20px;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .result-total-price{
+                border-top: 1px solid #f4f4f4;
+                display: inline-block;
+                vertical-align: top;
+                width: 100%;
+                padding: 15px 0 25px 0;
+                line-height: 25px;
+                letter-spacing: 0.2;
+                span{
+                    float: right;
+                    color: #797979;
+                    font-weight: 700;
+                }
+            }
+        }
+        @media screen and (max-width:$deviceMobile){
+            padding: 0 20px;
+            .left-colm{
+                width: 100%;
+                float: none;
+                .firsat-setleri-prd-list{
+                    > li{
+                        max-width: 49%;
+                        margin-right: 2%;
+                        &:nth-child(3n+3){
+                            margin-right: 2%;
+                        }
+                        &:nth-child(2n+2){
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .right-colm{
+                width: 100%;
+                float: none;
+                padding-left: 0;
+            }
+        }
+    }
+}
+
 
 .nivo-lightbox-body-effect-fade{
     overflow: hidden;
